@@ -1,0 +1,18 @@
+<p> Diary Application </p>
+
+<!-- <p> <%= @all_entries %> </p> -->
+
+<form method="get" action="/add_entry">
+  <input type="submit" name="add" value="Add">
+</form>
+
+
+<ul>
+  <% @all_entries.each do |entry| %>
+    <li>
+      <a href="<%= entry.title %>">
+        <%= entry.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>
